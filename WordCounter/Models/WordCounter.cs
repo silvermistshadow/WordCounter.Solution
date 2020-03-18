@@ -21,7 +21,7 @@ namespace WordCounter
             word = input.ToLower();
             word = RemoveNonLetter(word);
             sentence = inputSentence.ToLower();
-            sentence = RemoveNonLetter(sentence);
+            
         }
 
 
