@@ -3,28 +3,37 @@ using System.Linq;
 
 namespace WordCounter.Models
 {
-    public class WordCounter
+    public class RepeatCounter
     {
         
-        public string word { get; set; } = "";
-        public string sentence { get; set; } = "";
-        public char letter { get; set; } = ' ';
-        public char checkLetter { get; set; } = ' ';
-        public WordCounter(char input, char letterToCheck)
+        public string Word { get; set; }
+        public string Sentence { get; set; }
+        public char Letter { get; set; }
+        public char CheckLetter { get; set; }
+        public RepeatCounter(char input, char letterToCheck)
         {
-            letter = Char.ToLower(input);
-            checkLetter = Char.ToLower(letterToCheck);
+            Letter = Char.ToLower(input);
+            CheckLetter = Char.ToLower(letterToCheck);
         }
 
-        public WordCounter(string input, string inputSentence)
+        public RepeatCounter(string input, string inputSentence)
         {
-            word = input.ToLower();
-            word = RemoveNonLetter(word);
-            sentence = inputSentence.ToLower();
-            
+            Word = input.ToLower();
+            Word = RemoveNonLetter(Word);
+            Sentence = inputSentence.ToLower();
         }
 
-
+        public bool letterMatch()
+        {
+            if (this.Letter == this.CheckLetter)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
          public string RemoveNonLetter(string input)
         {
             return new string(input.ToCharArray()
