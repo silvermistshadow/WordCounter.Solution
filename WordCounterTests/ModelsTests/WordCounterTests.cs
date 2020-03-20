@@ -27,5 +27,16 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, false);
         }
+        [TestMethod]
+        public void WordCounter_SingleLetterCapitalMatch_True()
+        {
+            //Arrange
+            RepeatCounter testCapital = new RepeatCounter('a', 'A');
+            //Act
+            bool result = testCapital.letterMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+        }
+        
     }
 }

@@ -10,6 +10,7 @@ namespace WordCounter.Models
         public string Sentence { get; set; }
         public char Letter { get; set; }
         public char CheckLetter { get; set; }
+        
         public RepeatCounter(char input, char letterToCheck)
         {
             Letter = Char.ToLower(input);
