@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter;
+using WordCounter.Models;
 
-namespace WordCounterTests
+namespace WordCounter.Tests
 {
     [TestClass]
     public class WordCounterTests
@@ -10,7 +10,7 @@ namespace WordCounterTests
         public void WordCounter_SingleLetterMatch_True()
         {
             //Arrange
-            WordCounter.WordCounter testLetter = new WordCounter.WordCounter('a', 'a');
+            WordCounter testLetter = new WordCounter('a', 'a');
             //Act
             
             //Assert

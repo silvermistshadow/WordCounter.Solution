@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace WordCounter
+namespace WordCounter.Models
 {
     public class WordCounter
     {
