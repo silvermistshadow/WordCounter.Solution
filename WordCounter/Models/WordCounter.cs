@@ -35,6 +35,18 @@ namespace WordCounter.Models
                 return false;
             }
         }
+
+        public bool wordMatch()
+        {
+            if (this.Word == this.Sentence)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
          public string RemoveNonLetter(string input)
         {
             return new string(input.ToCharArray()

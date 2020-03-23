@@ -38,5 +38,16 @@ namespace WordCounter.Tests
             Assert.AreEqual(result, true);
         }
         
+        [TestMethod]
+        public void WordCounter_SingleWordMatch_True()
+        {
+            //Arrange
+            RepeatCounter testWord = new RepeatCounter("cat", "cat");
+            //Act
+            bool result = testWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+
+        }
     }
 }
