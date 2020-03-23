@@ -47,7 +47,26 @@ namespace WordCounter.Tests
             bool result = testWord.wordMatch();
             //Assert
             Assert.AreEqual(result, true);
-
+        }
+        [TestMethod]
+        public void WordCounter_SingleWordCapMatch_True()
+        {
+            //Arrange
+            RepeatCounter testCapitalWord = new RepeatCounter("cat", "CAT");
+            //Act
+            bool result = testCapitalWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+        }
+        [TestMethod]
+        public void WordCounter_SingleWordNonMatch_False()
+        {   
+            //Arrange
+            RepeatCounter testWord = new RepeatCounter("cat", "dog");
+            //Act
+            bool result = testWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, false);
         }
     }
 }
