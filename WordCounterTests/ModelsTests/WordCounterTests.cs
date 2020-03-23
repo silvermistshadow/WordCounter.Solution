@@ -68,5 +68,25 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, false);
         }
+        [TestMethod]
+        public void WordCounter_SingleWordIgnoreWhitespace_true()
+        {
+            //Arrange
+            RepeatCounter testWord = new RepeatCounter("c at", "cat");
+            //Act
+            bool result = testWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+        }
+        [TestMethod]
+        public void WordCounter_SingleWordIgnoreNumber_True()
+        {
+            //Arrange
+            RepeatCounter testWord = new RepeatCounter("c3at", "cat");
+            //Act
+            bool result = testWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+        }
     }
 }
