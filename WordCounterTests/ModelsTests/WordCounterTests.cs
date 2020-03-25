@@ -88,5 +88,25 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+        [TestMethod]
+        public void WordCounter_SingleWordIgnorePunct_True()
+        {
+            //Arrange
+            RepeatCounter testWord = new RepeatCounter("Cat.", "cat");
+            //Act
+            bool result = testWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+        }
+        [TestMethod]
+        public void WordCounter_SingleWordIgnorePartial_False()
+        {
+            //Arrange
+            RepeatCounter testWord = new RepeatCounter("cat", "cathedral");
+            //Act
+            bool result = testWord.wordMatch();
+            //Assert
+            Assert.AreEqual(result, false);
+        }
     }
 }
