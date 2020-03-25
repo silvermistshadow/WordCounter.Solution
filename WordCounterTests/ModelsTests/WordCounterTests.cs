@@ -108,5 +108,15 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, false);
         }
+        [TestMethod]
+        public void WordCounter_SentenceMatch_True()
+        {
+            //Arrange
+            RepeatCounter testSentence = new RepeatCounter("fox", "The quick brown fox jumped over the lazy dog");
+            //Act
+            bool result = testSentence.sentenceMatch();
+            //Assert
+            Assert.AreEqual(result, true);
+        }
     }
 }
