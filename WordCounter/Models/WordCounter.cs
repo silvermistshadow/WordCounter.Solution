@@ -61,14 +61,17 @@ namespace WordCounter.Models
 
         public int matchCount()
         {
-            List<int> positions = new List<int>();
-            int pos = 0;
-            while ((pos < Sentence.Length) && (pos = Sentence.IndexOf(Word, pos)) != -1)
+            string[] split = this.Sentence.Split(' ');
+            int matchCount = 0;
+            for(int i = 0; i<split.Length; i++)
             {
-                positions.Add(pos);
-                pos += Word.Length;
+                split[i] = RemoveNonLetter(split[i]);
+                if (split[i] == Word)
+                {
+                    matchCount += 1;
+                }
             }
-            return positions.Count;
+            return matchCount;
         }
          public string RemoveNonLetter(string input)
         {

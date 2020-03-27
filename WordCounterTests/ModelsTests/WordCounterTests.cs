@@ -126,7 +126,7 @@ namespace WordCounter.Tests
             //Act
             int result = testSentence.matchCount();
             //Assert
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 2);
         }
     }
 }
