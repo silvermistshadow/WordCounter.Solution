@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace WordCounter.Models
 {
@@ -56,6 +57,18 @@ namespace WordCounter.Models
                 split[i] = RemoveNonLetter(split[i]);
             }
             return Array.Exists(split, element => element == Word);
+        }
+
+        public int matchCount()
+        {
+            List<int> positions = new List<int>();
+            int pos = 0;
+            while ((pos < Sentence.Length) && (pos = Sentence.IndexOf(Word, pos)) != -1)
+            {
+                positions.Add(pos);
+                pos += Word.Length;
+            }
+            return positions.Count;
         }
          public string RemoveNonLetter(string input)
         {

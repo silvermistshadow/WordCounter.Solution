@@ -118,5 +118,15 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+        [TestMethod]
+        public void RepeatCounter_GetMatches_3()
+        {   
+            //Arrange
+            RepeatCounter testSentence = new RepeatCounter("poop", "How many poops did the cat leave in the poop box, it was already full of POOP.");
+            //Act
+            int result = testSentence.matchCount();
+            //Assert
+            Assert.AreEqual(result, 3);
+        }
     }
 }

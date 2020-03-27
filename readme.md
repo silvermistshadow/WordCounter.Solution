@@ -45,9 +45,13 @@ _A program that gathers both a word and sentence from a user, then checks how fr
 
     5:
         check for a whole word in a sentence
+        input: "fox", "The quick brown fox jumped over the lazy dog"
+        output: true
 
     6:
         count the number of times a whole word appears in a sentence
+        input: "poop", "How many poops did the cat leave in the poop box, it was already full of POOP."
+        output: 3
 
 ## Setup/Installation Requirements
 
