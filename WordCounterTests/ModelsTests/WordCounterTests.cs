@@ -27,6 +27,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, false);
         }
+        
         [TestMethod]
         public void WordCounter_SingleLetterCapitalMatch_True()
         {
@@ -48,6 +49,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+
         [TestMethod]
         public void WordCounter_SingleWordCapMatch_True()
         {
@@ -58,6 +60,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+
         [TestMethod]
         public void WordCounter_SingleWordNonMatch_False()
         {   
@@ -68,6 +71,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, false);
         }
+
         [TestMethod]
         public void WordCounter_SingleWordIgnoreWhitespace_true()
         {
@@ -78,6 +82,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+
         [TestMethod]
         public void WordCounter_SingleWordIgnoreNumber_True()
         {
@@ -88,6 +93,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+
         [TestMethod]
         public void WordCounter_SingleWordIgnorePunct_True()
         {
@@ -98,6 +104,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+
         [TestMethod]
         public void WordCounter_SingleWordIgnorePartial_False()
         {
@@ -108,6 +115,7 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, false);
         }
+
         [TestMethod]
         public void WordCounter_SentenceMatch_True()
         {
@@ -118,8 +126,9 @@ namespace WordCounter.Tests
             //Assert
             Assert.AreEqual(result, true);
         }
+
         [TestMethod]
-        public void RepeatCounter_GetMatches_3()
+        public void RepeatCounter_GetMatches_2()
         {   
             //Arrange
             RepeatCounter testSentence = new RepeatCounter("poop", "How many poops did the cat leave in the poop box, it was already full of POOP.");

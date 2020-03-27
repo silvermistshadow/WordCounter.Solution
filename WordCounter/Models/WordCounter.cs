@@ -73,7 +73,8 @@ namespace WordCounter.Models
             }
             return matchCount;
         }
-         public string RemoveNonLetter(string input)
+
+        public string RemoveNonLetter(string input)
         {
             return new string(input.ToCharArray()
             .Where(c => char.IsLetter(c))
