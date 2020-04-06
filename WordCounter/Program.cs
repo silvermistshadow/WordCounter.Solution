@@ -13,7 +13,7 @@ namespace WordCounter
             Console.WriteLine("Next, please enter the sentence:");
             string inputSentence = Console.ReadLine();
             RepeatCounter repeat = new RepeatCounter(inputWord, inputSentence);
-            Console.WriteLine("There were {0} matches", repeat.matchCount());
+            Console.WriteLine("There were {0} matches", repeat.MatchCount());
         }
     }
 }

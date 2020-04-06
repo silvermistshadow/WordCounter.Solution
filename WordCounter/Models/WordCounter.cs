@@ -25,7 +25,7 @@ namespace WordCounter.Models
             Sentence = inputSentence.ToLower();
         }
 
-        public bool letterMatch()
+        public bool LetterMatch()
         {
             if (this.Letter == this.CheckLetter)
             {
@@ -37,7 +37,7 @@ namespace WordCounter.Models
             }
         }
 
-        public bool wordMatch()
+        public bool WordMatch()
         {
             if (this.Word == this.Sentence)
             {
@@ -49,7 +49,7 @@ namespace WordCounter.Models
             }
         }
 
-        public bool sentenceMatch() //This only returns whether a match exists- another will actually count how many matches exist
+        public bool SentenceMatch() //This only returns whether a match exists- another will actually count how many matches exist
         {
             string[] split = this.Sentence.Split(' ');
             for(int i = 0; i<split.Length; i++)
@@ -59,7 +59,7 @@ namespace WordCounter.Models
             return Array.Exists(split, element => element == Word);
         }
 
-        public int matchCount()
+        public int MatchCount()
         {
             string[] split = this.Sentence.Split(' ');
             int matchCount = 0;

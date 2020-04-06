@@ -57,7 +57,14 @@ _A program that gathers both a word and sentence from a user, then checks how fr
 
 * _Requires .NET framework_
 * _download/clone repo_
+* _navigate to the WordCounter directory_
 * _dotnet run_
+* _enter a word and a sentence into the console_
+
+For testing:
+* _Same requirements as above_
+* _navigate to WordCounterTests directory_
+* _dotnet test_
 
 ## Technologies Used
 

@@ -12,7 +12,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testLetter = new RepeatCounter('a', 'a');
             //Act
-            bool result = testLetter.letterMatch();
+            bool result = testLetter.LetterMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -23,7 +23,7 @@ namespace WordCounter.Tests
             //Arrange
              RepeatCounter testLetter = new RepeatCounter('a', 'b');
             //Act
-            bool result = testLetter.letterMatch();
+            bool result = testLetter.LetterMatch();
             //Assert
             Assert.AreEqual(result, false);
         }
@@ -34,7 +34,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testCapital = new RepeatCounter('a', 'A');
             //Act
-            bool result = testCapital.letterMatch();
+            bool result = testCapital.LetterMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -45,7 +45,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testWord = new RepeatCounter("cat", "cat");
             //Act
-            bool result = testWord.wordMatch();
+            bool result = testWord.WordMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -56,7 +56,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testCapitalWord = new RepeatCounter("cat", "CAT");
             //Act
-            bool result = testCapitalWord.wordMatch();
+            bool result = testCapitalWord.WordMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -67,7 +67,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testWord = new RepeatCounter("cat", "dog");
             //Act
-            bool result = testWord.wordMatch();
+            bool result = testWord.WordMatch();
             //Assert
             Assert.AreEqual(result, false);
         }
@@ -78,7 +78,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testWord = new RepeatCounter("c at", "cat");
             //Act
-            bool result = testWord.wordMatch();
+            bool result = testWord.WordMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -89,7 +89,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testWord = new RepeatCounter("c3at", "cat");
             //Act
-            bool result = testWord.wordMatch();
+            bool result = testWord.WordMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -100,7 +100,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testWord = new RepeatCounter("Cat.", "cat");
             //Act
-            bool result = testWord.wordMatch();
+            bool result = testWord.WordMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -111,7 +111,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testWord = new RepeatCounter("cat", "cathedral");
             //Act
-            bool result = testWord.wordMatch();
+            bool result = testWord.WordMatch();
             //Assert
             Assert.AreEqual(result, false);
         }
@@ -122,7 +122,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testSentence = new RepeatCounter("fox", "The quick brown fox jumped over the lazy dog");
             //Act
-            bool result = testSentence.sentenceMatch();
+            bool result = testSentence.SentenceMatch();
             //Assert
             Assert.AreEqual(result, true);
         }
@@ -133,7 +133,7 @@ namespace WordCounter.Tests
             //Arrange
             RepeatCounter testSentence = new RepeatCounter("poop", "How many poops did the cat leave in the poop box, it was already full of POOP.");
             //Act
-            int result = testSentence.matchCount();
+            int result = testSentence.MatchCount();
             //Assert
             Assert.AreEqual(result, 2);
         }
